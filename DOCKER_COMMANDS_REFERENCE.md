@@ -11,7 +11,23 @@ docker --version
 docker info
 
 # Статус демона
-systemctl status docker
+sudo systemctl status docker
+```
+
+### Установка Docker
+
+**Debian/Ubuntu:**
+```bash
+sudo apt-get update
+sudo apt-get install docker.io -y
+sudo systemctl start docker
+```
+
+**Arch Linux / CachyOS / Manjaro:**
+```bash
+sudo pacman -S docker
+sudo systemctl start docker
+sudo systemctl enable docker
 ```
 
 ### Работа с образами

@@ -2,12 +2,28 @@
 
 ## Часть A - Задача 1: Установка Docker
 
+**Debian/Ubuntu:**
 ```bash
 # Установка
 sudo apt-get update && sudo apt-get install docker.io -y
 
-# Добавление в группу docker (без sudo)
+# Добавление в группу docker
 sudo usermod -aG docker $USER && newgrp docker
+
+# Проверка
+docker --version && docker run hello-world
+```
+
+**Arch Linux / CachyOS / Manjaro:**
+```bash
+# Установка
+sudo pacman -Syu && sudo pacman -S docker
+
+# Добавление в группу docker
+sudo usermod -aG docker $USER && newgrp docker
+
+# Запуск сервиса
+sudo systemctl start docker && sudo systemctl enable docker
 
 # Проверка
 docker --version && docker run hello-world

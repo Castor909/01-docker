@@ -9,18 +9,35 @@
 2. **Configure Docker** to work without root privileges
 
 #### Commands:
+
+**Debian/Ubuntu:**
 ```bash
-# Install Docker (Debian/Ubuntu)
+# Install Docker
 sudo apt-get update
 sudo apt-get install docker.io -y
 
 # Add your user to the docker group
 sudo usermod -aG docker $USER
-
-# Apply group membership (choose one):
-# Option 1: Log out and log back in
-# Option 2: Run this command
 newgrp docker
+
+# Verify installation
+docker --version
+docker run hello-world
+```
+
+**Arch Linux / CachyOS / Manjaro:**
+```bash
+# Install Docker
+sudo pacman -Syu
+sudo pacman -S docker
+
+# Add your user to the docker group
+sudo usermod -aG docker $USER
+newgrp docker
+
+# Start and enable Docker service
+sudo systemctl start docker
+sudo systemctl enable docker
 
 # Verify installation
 docker --version

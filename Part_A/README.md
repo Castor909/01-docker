@@ -9,8 +9,10 @@
 - [ ] Успешный запуск `docker run hello-world`
 
 ### Команды для выполнения:
+
+**Debian/Ubuntu:**
 ```bash
-# Установка Docker (Debian/Ubuntu)
+# Установка Docker
 sudo apt-get update
 sudo apt-get install docker.io -y
 
@@ -23,9 +25,29 @@ docker --version
 docker run hello-world
 ```
 
+**Arch Linux / CachyOS / Manjaro:**
+```bash
+# Установка Docker
+sudo pacman -Syu
+sudo pacman -S docker
+
+# Добавление пользователя в группу docker
+sudo usermod -aG docker $USER
+newgrp docker
+
+# Запуск и включение сервиса Docker
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# Проверка установки
+docker --version
+docker run hello-world
+```
+
 ### Примечания:
 - Если команда newgrp не сработает, выйдите и заново войдите в систему
 - Проверьте, что `docker run` работает БЕЗ `sudo`
+- Для CachyOS используйте команды как для Arch Linux
 
 ---
 
