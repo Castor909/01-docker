@@ -1,0 +1,66 @@
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+.project
+.classpath
+.c9/
+
+# Node
+node_modules/
+package-lock.json
+npm-debug.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS-specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+.cache/
+
+# System files
+.vscode-root-volume
+
+# Allow PNG, JPG screenshot files (for Part A and B)
+!Part_A/screenshots/*.png
+!Part_A/screenshots/*.jpg
+!Part_B/screenshots/*.png
+!Part_B/screenshots/*.jpg
+
+# But keep screenshots folders
+!Part_A/screenshots/
+!Part_B/screenshots/
